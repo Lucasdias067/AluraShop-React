@@ -18,7 +18,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O AluraShop é um projeto do curso da Alura, ele começa com um formulário pedindo para colocar o seu Nome e Saldo. Com isso feito, podemos iteragir melhor com o projeto, adicionando ou removendo vários produtos para mandar ao carrinho. Na parte do carrinho é aonde fazemos a compra, que é possível fazer o pagamento com de quatro formas: Boleto, PIX, Cartão de crédito e Crediário, cada um tem o seu juros e o preço aumentará dependendo da forma de pagamento. Lembrando que não é possível fazer a compra sem saldo.
+O AluraShop é um projeto do curso da Alura, ele começa com um formulário pedindo para colocar o seu Nome e Saldo. Com isso feito, podemos iteragir melhor com o projeto, adicionando ou removendo vários produtos para mandar ao carrinho. Na parte do carrinho é aonde fazemos a compra, que é possível fazer o pagamento com de quatro formas: Boleto, PIX, Cartão de crédito e Crediário, cada um tem o seu juros e o preço aumentará dependendo da forma de pagamento. Lembrando que não é possível fazer a compra se o preço total do carrinho for maior que saldo atual ou se estiver sem saldo.
 
 
 
