@@ -10,9 +10,9 @@ Podemos fazer algumas interações no site, como filtrar os vídeos no campo de 
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-✅ReactJS
-✅React Hooks (useState, useEffect, useContext)
-✅ContexAPI
+✅ReactJS;<br>
+✅React Hooks (useState, useEffect, useContext);<br>
+✅ContexAPI;<br>
 ✅React-Router: useNavigation;<br>
 ✅Styled Components com responsividade<br>
 ✅Componentes e props;<br>
