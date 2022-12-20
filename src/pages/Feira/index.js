@@ -1,17 +1,18 @@
-import {
-  Container,
-  Header,
-  Lista,
-} from './styles';
+import { Container, Header, Lista, } from './styles';
 import feira from './feira.json';
 import Produto from 'components/Produto';
 import NavBar from './NavBar';
 import { UsuarioContext } from "common/context/Usuario";
 import { useContext } from 'react';
+import { Button } from '@material-ui/core';
+import { useCarrinhoContext } from 'common/context/Carrinho';
+import { useNavigate } from 'react-router-dom';
 
 function Feira() {
 
   const { name, saldo } = useContext(UsuarioContext)
+  const { quantidadeProduto } = useCarrinhoContext();
+  const navigate = useNavigate();
 
   return (
     <Container>
@@ -34,6 +35,16 @@ function Feira() {
           />
         ))}
       </Lista>
+      <div>
+        <Button
+          onClick={() => { navigate('/carrinho') }}
+          color="primary"
+          variant="contained"
+          disabled={!quantidadeProduto}
+        >
+          Carrinho
+        </Button>
+      </div>
     </Container>
   )
 }

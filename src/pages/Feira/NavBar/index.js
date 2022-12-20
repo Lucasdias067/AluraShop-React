@@ -12,7 +12,6 @@ export default function NavBar() {
 
   const { quantidadeProduto } = useCarrinhoContext();
   const { setName } = useContext(UsuarioContext)
-
   const navigate = useNavigate();
 
   return (
