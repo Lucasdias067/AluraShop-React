@@ -10,7 +10,7 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-✅ReactJS;<br>
+✅React;<br>
 ✅React Hooks (useState, useEffect, useContext);<br>
 ✅ContexAPI;<br>
 ✅React-Router: useNavigation;<br>
