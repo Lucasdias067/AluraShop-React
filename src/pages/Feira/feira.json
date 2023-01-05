@@ -3,30 +3,35 @@
     "nome": "Tomate",
     "foto": "tomate",
     "valor": 4.80,
-    "id": "1"
+    "id": "1",
+    "quantidade": 0
   },
   {
     "nome": "Brócolis",
     "foto": "brocolis",
     "valor": 2.50,
-    "id": "2"
+    "id": "2",
+    "quantidade": 0
   },
   {
     "nome": "Batata",
     "foto": "batata",
     "valor": 3.60,
-    "id": "3"
+    "id": "3",
+    "quantidade": 0
   },
   {
     "nome": "Pepino",
     "foto": "pepino",
     "valor": 1.80,
-    "id": "4"
+    "id": "4",
+    "quantidade": 0
   },
   {
     "nome": "Abóbora",
     "foto": "abobora",
     "valor": 5,
-    "id": "5"
+    "id": "5",
+    "quantidade": 0
   }
 ]

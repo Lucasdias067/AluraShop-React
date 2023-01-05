@@ -16,10 +16,11 @@ export default function NavBar() {
 
   return (
     <Nav >
-      <Logo onClick={() => {navigate('/'); setName('')}} className="logo"/>
+      <Logo onClick={() => { navigate('/'); setName('') }} className="logo" />
       <IconButton disabled={!quantidadeProduto} onClick={() => navigate('/carrinho')}>
         <Badge
           color="primary"
+          overlap="rectangular"
           badgeContent={quantidadeProduto}
         >
           <ShoppingCartIcon />

@@ -1,7 +1,21 @@
 import { createContext, useContext, useState } from "react";
-export const PagamentoContext = createContext()
+import { childrenProps } from "types/Feira";
 
-export const PagamentoProvider = ({ children }) => {
+interface pagamentosProps {
+  nome: string,
+  juros: number,
+  id: number
+}
+
+interface PagamentoContextValue {
+  formaPagamento: pagamentosProps,
+  setFormaPagamento: React.Dispatch<React.SetStateAction<pagamentosProps>>,
+  tiposPagamento: pagamentosProps[]
+}
+
+export const PagamentoContext = createContext({} as PagamentoContextValue)
+
+export const PagamentoProvider = ({ children }: childrenProps) => {
 
   const tiposPagamento = [{
     nome: 'Boleto',
@@ -19,9 +33,9 @@ export const PagamentoProvider = ({ children }) => {
     nome: 'Crediário',
     juros: 1.2,
     id: 4,
-  },]
+  }]
 
-  const [formaPagamento, setFormaPagamento] = useState(tiposPagamento[0])
+  const [formaPagamento, setFormaPagamento] = useState<pagamentosProps>(tiposPagamento[0])
 
   return (
     <PagamentoContext.Provider value={{ formaPagamento, setFormaPagamento, tiposPagamento }}>
@@ -38,9 +52,9 @@ export const usePagamentoContext = () => {
     tiposPagamento
   } = useContext(PagamentoContext);
 
-  function mudarFormaPagamento(id) {
+  function mudarFormaPagamento(id: number) {
     const pagamentoAtual = tiposPagamento.find(pagamento => pagamento.id === id)
-    setFormaPagamento(pagamentoAtual)
+    if (pagamentoAtual !== undefined) setFormaPagamento(pagamentoAtual)
   }
 
   return {

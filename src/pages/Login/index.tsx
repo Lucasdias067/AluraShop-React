@@ -24,9 +24,9 @@ export default function Login() {
       <InputContainer>
         <InputLabel>Saldo</InputLabel>
         <Input
-          onClick={() => setSaldo(saldo => saldo === 0 ? "" : saldo)}
+          onClick={() => setSaldo(saldo => saldo === '0' ? "" : saldo)}
           value={saldo}
-          onChange={(e) => setSaldo(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSaldo(e.target.value)}
           type="number"
           startAdornment={
             <InputAdornment position="start">R$</InputAdornment>

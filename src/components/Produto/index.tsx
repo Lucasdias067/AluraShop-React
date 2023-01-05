@@ -4,18 +4,21 @@ import { IconButton } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import { useCarrinhoContext } from "common/context/Carrinho";
+import { IFeira } from 'types/Feira';
+
+interface ProdutoProps extends IFeira { }
 
 function Produto({
   nome,
   foto,
   id,
   valor,
-  unidade
-}) {
+  quantidade
+}: ProdutoProps) {
 
   const { carrinho, adicionarProduto, removerProduto } = useCarrinhoContext();
 
-  const produtoNoCarrinho = carrinho.find(itemProduto => itemProduto.id === id);
+  const produtoNoCarrinho = carrinho.find((itemProduto) => itemProduto.id === id);
 
   return (
     <Container>
@@ -38,7 +41,7 @@ function Produto({
           <RemoveIcon />
         </IconButton>
         {produtoNoCarrinho?.quantidade || 0}
-        <IconButton color='primary' onClick={() => adicionarProduto({ nome, foto, id, valor })}>
+        <IconButton color='primary' onClick={() => adicionarProduto({ nome, foto, id, valor, quantidade })}>
           <AddIcon />
         </IconButton>
       </div>
