@@ -15,9 +15,21 @@ export const Container = styled(Card)`
       font-size: 22px;
       font-weight: bold;
       padding: 5px 0 0 5px;
+      @media(max-width: 1024px) {
+        font-size: 14px;
+      }
+      @media(max-width: 400px) {
+        width: 80px;
+      }
     }
     span {
       font-size: 16px;
+      @media(max-width: 1024px) {
+        font-size: 10px;
+      }
+    }
+    @media(max-width: 1024px) {
+      gap: 0px;
     }
   }
 `;

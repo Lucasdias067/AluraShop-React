@@ -34,17 +34,17 @@ function Feira() {
             key={produto.id}
           />
         ))}
+        <div>
+          <Button
+            onClick={() => { navigate('/carrinho') }}
+            color="primary"
+            variant="contained"
+            disabled={!quantidadeProduto}
+          >
+            Carrinho
+          </Button>
+        </div>
       </Lista>
-      <div>
-        <Button
-          onClick={() => { navigate('/carrinho') }}
-          color="primary"
-          variant="contained"
-          disabled={!quantidadeProduto}
-        >
-          Carrinho
-        </Button>
-      </div>
     </Container>
   )
 }

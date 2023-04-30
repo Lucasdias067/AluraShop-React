@@ -39,13 +39,22 @@ export const TotalContainer = styled.section`
     h2 {
       color: ${titleGray};
       font-size: 32px;
+      @media(max-width: 1024px) {
+        font-size: 24px;
+      }
     }
     span {
       font-size: 30px;
+      @media(max-width: 1024px) {
+        font-size: 20px;
+      }
     }
   }
 `
 
 export const PagamentoContainer = styled(FormControl)`
   width: 100%;
+  @media(max-width: 1024px) {
+    font-size: 20px;
+  }
 `

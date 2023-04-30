@@ -16,6 +16,9 @@ export const Titulo = styled.h2`
   margin-top: 50px;
   color: #464646;
   font-size: 32px;
+  @media(max-width: 340px) {
+    font-size: 28px;
+  }
 `;
 
 export const InputContainer = styled(FormControl)`

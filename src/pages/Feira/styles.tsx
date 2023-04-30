@@ -31,21 +31,32 @@ export const Header = styled.header`
     h3 {
       font-size: 26px;
     }
+    @media(max-width: 1024px) {
+    flex-direction: column;
+    }
   }
   > p {
     color: #A3A3A3;
     font-size: 26px;
+    @media(max-width: 1024px) {
+    text-align: center;
+    }
   }
 `;
 
 export const Lista = styled.section`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
   padding: 20px 0;
   > h2 {
     color: ${titleGray};
     font-size: 32px;
     margin-top: 20px;
+    @media(max-width: 1024px) {
+      font-size: 28px;
+      text-align: center;
+    }
   }
 `;

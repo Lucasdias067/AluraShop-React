@@ -46,7 +46,7 @@ function Carrinho() {
       </PagamentoContainer>
       <TotalContainer>
         <div>
-          <h2>Total no Carrinho: </h2>
+          <h2>Total: </h2>
           <span>R$ {totalProduto.toFixed(2)}</span>
         </div>
         <div>

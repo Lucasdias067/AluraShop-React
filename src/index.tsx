@@ -18,11 +18,11 @@ const theme = createTheme({
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
-  <React.Fragment>
+  <React.StrictMode>
     <StylesProvider injectFirst>
       <ThemeProvider theme={theme}>
         <Router />
       </ThemeProvider>
     </StylesProvider>
-  </React.Fragment>,
+  </React.StrictMode>,
 )
